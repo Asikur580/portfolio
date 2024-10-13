@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Personal Portfolio</title>
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/4461893c3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts (montserrat) -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Swiper js -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+    <!-- animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+    <!-- ================== navbar ===================== -->
+    <nav>
+      <div class="container nav_container">
+          <a href="index.html">ARLS</a>
+          <button class="nav_theme-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ================== floating navbar ===================== -->
+
+    <menu class="floating_nav">
+      <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+      <a href="#resume"><i class="fa-solid fa-user"></i></i></a>
+      <a href="#projects"><i class="fa-solid fa-image"></i></a>
+      <a href="#faqs"><i class="fa-solid fa-dizzy"></i></a>
+      <a href="#contact"><i class="fa-solid fa-phone"></i></a>
+    </menu>
+
+
+    <!-- ================== header ===================== -->
+
+    <header>
+      <div class="header_container">
+        <div class="header_image" data-aos="fade-up" data-aos-delay="800">
+          <img src="assets/portrait1.png" alt="Header Image">
+        </div>
+        <h5 data-aos="fade-in">Hi, I'm Asikur Rahman</h5>
+        <h1 data-aos="fade-in">Fullstack <span>Web Developer</span><br>Base in Bangladesh</h1>
+        <p data-aos="fade-in">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum aliquid expedita reiciendis velit repellendus rerum id ad, placeat est?
+        </p>
+        <div class="header_cta" data-aos="fade-in">
+          <a href="#projects" class="btn">My Projects</a>
+          <a href="#contact" class="btn primary">Hire me</a>
+        </div>
+        <menu class="header_socials">
+          <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+          <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://dribbble.com"><i class="fa-brands fa-dribbble"></i></a>
+          <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+        </menu>
+      </div>
+    </header>
+
+
+
+    <!-- ================== resume ===================== -->
+
+    <section id="resume">
+      <div class="container resume_container" data-aos="fade-in" data-aos-delay="200">
+        <div class="resume_left">
+          <h1>Why hire me?</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <menu>
+            <button class="btn primary experience_btn">Experience</button>
+            <button class="btn education_btn">Education</button>
+            <button class="btn skills_btn">Skills</button>
+            <button class="btn about_btn">About me</button>
+          </menu>
+        </div>
+        <div class="resume_right">
+          
+        </div>
+      </div>
+    </section>
+
+ <!-- ================== Projects ===================== -->
+
+<section class="projects" id="projects">
+  <h1>Recent Peojects</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam atque odio, dicta cumque ab voluptate.
+  </p>
+  <menu class="projects_categories">
+    <button class="btn" data-filter="*">All</button>
+    <button class="btn" data-filter=".frontend">Frontend</button>
+    <button class="btn" data-filter=".backend">Backend</button>
+    <button class="btn" data-filter=".fullstack">Fullstack</button>
+  </menu>
+  <div class="container projects_container" data-aos="fade-in" data-aos-delay="200">
+    <article class="project mix fullstack" data-order="1">
+      <div class="project_image">
+        <img src="assets/project1.jpg" alt="Project One">
+      </div>
+      <h5>Project one Title (Fullstack)</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
+      </p>
+      <div class="project-cta">
+        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="https://github.com" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </article>
+
+    <article class="project mix frontend" data-order="2">
+      <div class="project_image">
+        <img src="assets/project2.jpg" alt="Project Two">
+      </div>
+      <h5>Project two Title (Frontend)</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
+      </p>
+      <div class="project-cta">
+        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="https://github.com" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </article>
+
+    <article class="project mix fullstack" data-order="3">
+      <div class="project_image">
+        <img src="assets/project3.jpg" alt="Project Three">
+      </div>
+      <h5>Project three Title (Fullstack)</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
+      </p>
+      <div class="project-cta">
+        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="https://github.com" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </article>
+
+    <article class="project mix frontend" data-order="4">
+      <div class="project_image">
+        <img src="assets/project4.jpg" alt="Project Four">
+      </div>
+      <h5>Project four Title (Frontend)</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
+      </p>
+      <div class="project-cta">
+        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="https://github.com" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </article>
+
+    <article class="project mix frontend" data-order="5">
+      <div class="project_image">
+        <img src="assets/project5.jpg" alt="Project Five">
+      </div>
+      <h5>Project five Title (Frontend)</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
+      </p>
+      <div class="project-cta">
+        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="https://github.com" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </article>
+
+    <article class="project mix backend" data-order="6">
+      <div class="project_image">
+        <img src="assets/project6.jpg" alt="Project Six">
+      </div>
+      <h5>Project six Title (Backend)</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
+      </p>
+      <div class="project-cta">
+        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="https://github.com" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- testimonials -->
+
+<section id="swiper">
+  <h1>What my clients say</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
+  <div class="container swiper">
+    <div class="swiper-wrapper">
+      <figure class="swiper-slide">
+        <figcaption>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non impedit placeat eaque dignissimos? Ad qui sint consequuntur expedita, quos deleniti!
+        </figcaption>
+        <div class="swiper_client">
+          <div class="swiper_client-avater">
+            <img src="assets/avatar2.jpg" alt="Client One">
+          </div>
+          <div class="swiper_client-details">
+            <h5>Al Jubair Shovon</h5>
+            <small>Wev Developer</small>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="swiper-slide">
+        <figcaption>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non impedit placeat eaque dignissimos? Ad qui sint consequuntur expedita, quos deleniti!
+        </figcaption>
+        <div class="swiper_client">
+          <div class="swiper_client-avater">
+            <img src="assets/avatar2.jpg" alt="Client One">
+          </div>
+          <div class="swiper_client-details">
+            <h5>Al Jubair Shovon</h5>
+            <small>Wev Developer</small>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="swiper-slide">
+        <figcaption>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non impedit placeat eaque dignissimos? Ad qui sint consequuntur expedita, quos deleniti!
+        </figcaption>
+        <div class="swiper_client">
+          <div class="swiper_client-avater">
+            <img src="assets/avatar2.jpg" alt="Client One">
+          </div>
+          <div class="swiper_client-details">
+            <h5>Al Jubair Shovon</h5>
+            <small>Wev Developer</small>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="swiper-slide">
+        <figcaption>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non impedit placeat eaque dignissimos? Ad qui sint consequuntur expedita, quos deleniti!
+        </figcaption>
+        <div class="swiper_client">
+          <div class="swiper_client-avater">
+            <img src="assets/avatar2.jpg" alt="Client One">
+          </div>
+          <div class="swiper_client-details">
+            <h5>Al Jubair Shovon</h5>
+            <small>Wev Developer</small>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="swiper-slide">
+        <figcaption>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non impedit placeat eaque dignissimos? Ad qui sint consequuntur expedita, quos deleniti!
+        </figcaption>
+        <div class="swiper_client">
+          <div class="swiper_client-avater">
+            <img src="assets/avatar2.jpg" alt="Client One">
+          </div>
+          <div class="swiper_client-details">
+            <h5>Al Jubair Shovon</h5>
+            <small>Wev Developer</small>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="swiper-slide">
+        <figcaption>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non impedit placeat eaque dignissimos? Ad qui sint consequuntur expedita, quos deleniti!
+        </figcaption>
+        <div class="swiper_client">
+          <div class="swiper_client-avater">
+            <img src="assets/avatar2.jpg" alt="Client One">
+          </div>
+          <div class="swiper_client-details">
+            <h5>Al Jubair Shovon</h5>
+            <small>Wev Developer</small>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+<!-- faqs -->
+
+<section id="faqs">
+  <h1>Frequently Asked Questions</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi optio eveniet nisi.
+  </p>
+  <menu class="container faqs_container">
+    <li class="faqs_item" data-aos="fade-in" data-aos-delay="200">
+      <div class="faqs_item-top">
+        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
+        <h5>What's your hourly rate?</h5>
+      </div>
+      <div class="faqs-item-bottom">
+        <span></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt velit atque laudantium aspernatur ipsum modi et, molestias nobis nemo facere odio blanditiis voluptate cum nisi sapiente est optio harum.
+        </p>
+      </div>
+    </li>
+
+    <li class="faqs_item" data-aos="fade-in" data-aos-delay="200">
+      <div class="faqs_item-top">
+        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
+        <h5>What's your hourly rate?</h5>
+      </div>
+      <div class="faqs-item-bottom">
+        <span></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt velit atque laudantium aspernatur ipsum modi et, molestias nobis nemo facere odio blanditiis voluptate cum nisi sapiente est optio harum.
+        </p>
+      </div>
+    </li>
+
+    <li class="faqs_item" data-aos="fade-in" data-aos-delay="400">
+      <div class="faqs_item-top">
+        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
+        <h5>What's your hourly rate?</h5>
+      </div>
+      <div class="faqs-item-bottom">
+        <span></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt velit atque laudantium aspernatur ipsum modi et, molestias nobis nemo facere odio blanditiis voluptate cum nisi sapiente est optio harum.
+        </p>
+      </div>
+    </li>
+
+    <li class="faqs_item" data-aos="fade-in" data-aos-delay="400">
+      <div class="faqs_item-top">
+        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
+        <h5>What's your hourly rate?</h5>
+      </div>
+      <div class="faqs-item-bottom">
+        <span></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt velit atque laudantium aspernatur ipsum modi et, molestias nobis nemo facere odio blanditiis voluptate cum nisi sapiente est optio harum.
+        </p>
+      </div>
+    </li>
+
+    <li class="faqs_item" data-aos="fade-in" data-aos-delay="600">
+      <div class="faqs_item-top">
+        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
+        <h5>What's your hourly rate?</h5>
+      </div>
+      <div class="faqs-item-bottom">
+        <span></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt velit atque laudantium aspernatur ipsum modi et, molestias nobis nemo facere odio blanditiis voluptate cum nisi sapiente est optio harum.
+        </p>
+      </div>
+    </li>
+
+    <li class="faqs_item" data-aos="fade-in" data-aos-delay="600">
+      <div class="faqs_item-top">
+        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
+        <h5>What's your hourly rate?</h5>
+      </div>
+      <div class="faqs-item-bottom">
+        <span></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt velit atque laudantium aspernatur ipsum modi et, molestias nobis nemo facere odio blanditiis voluptate cum nisi sapiente est optio harum.
+        </p>
+      </div>
+    </li>
+
+  </menu>
+</section>
+
+<!-- contact -->
+
+<section id="contact">
+  <div class="container contact_container">
+    <menu class="contact_options">
+      <a href="#" class="contact_option" target="_blank">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="#" class="contact_option" target="_blank">
+        <i class="fa-brands fa-facebook-messenger"></i>
+      </a>
+      <a href="#" class="contact_option" target="_blank">
+        <i class="fa-brands fa-square-whatsapp"></i>
+      </a>
+      <a href="3" class="contact_option" target="_blank">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </menu>
+    <form action="" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" name="name" placeholder="Full Name">
+      <input type="email" name="email" placeholder="Email Address">
+      <textarea rows="7" name="message" placeholder="message"></textarea>
+      <button type="submit" class="btn primary">Send</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- mixitup  -->
+<script src="mix/dist/mixitup.min.js"></script>
+<!-- animate on scroll  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({duration: 2000, offset: 80});
+</script>
+<!-- custom js -->
+<script src="main.js"></script>
+
+
+  </body>
+</html>
