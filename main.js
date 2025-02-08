@@ -101,13 +101,16 @@ const skillsBtn = document.querySelector('.skills_btn');
 const skillsContent = `<h4>Skills</h4>
                 <p>Proficient in PHP, JavaScript, Laravel, Vue.js, Bootstrap, Tailwind CSS, MySQL, SQL Server, with expertise in RESTful APIs, MVC Architecture, Git, GitHub, Trello, and SDLC concepts.</p>
                 <ul>
+                    <li><img src="assets/php.png" alt="PHP logo"></li>
+                    <li><img src="assets/javascript.png" alt="JavaScript logo"></li>
+                    <li><img src="assets/laravel.png" alt="Laravel logo"></li>
+                    <li><img src="assets/vuejs.png" alt="VueJs logo"></li>
                     <li><img src="assets/react.webp" alt="ReactJS logo"></li>
-                    <li><img src="assets/next.png" alt="NextJS logo"></li>
+                    <li><img src="assets/nextjs.png" alt="NextJS logo"></li>
+                    <li><img src="assets/bootstrap.png" alt="Bootstrap logo"></li>
                     <li><img src="assets/tailwind.png" alt="Tailwind logo"></li>
-                    <li><img src="assets/prisma.png" alt="Prisma logo"></li>
-                    <li><img src="assets/mongo.jpg" alt="MongoDB logo"></li>
+                    <li><img src="assets/github.png" alt="GitHub logo"></li>
                     <li><img src="assets/jwt.png" alt="JWT logo"></li>
-                    <li><img src="assets/node.png" alt="NodeJS logo"></li>
                 </ul>`
 
 skillsBtn.addEventListener('click', () => {
