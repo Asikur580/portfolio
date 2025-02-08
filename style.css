@@ -148,7 +148,7 @@ section>h1,
 section>p {
     text-align: center;
     margin-top: 0.5rem;
-    width: 30rem;
+    width: 40rem;
     margin-inline: auto;
 }
 
@@ -273,6 +273,11 @@ header {
 
 .header_container h1 {
     margin: 0.8rem 0 0.1rem;
+}
+.header_container p{
+    text-align: center;
+
+    margin-top: 0.5rem;
 }
 
 .header_container h1 span {

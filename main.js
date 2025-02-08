@@ -19,28 +19,28 @@ floatingNavs.forEach(nav => {
 const resumeRight = document.querySelector('.resume_right');
 const experienceContent = `<h4>Experience</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo autem veniam doloribus ab sed similique reprehenderit ea voluptatum.
+            Experienced Laravel full-stack developer skilled in building custom web applications, eCommerce platforms, APIs, SaaS solutions, optimizing performance, and ensuring security, scalability, and seamless user experiences for diverse business needs.
           </p>
           <ul>
             <li>
-              <h6>2018 - 2019</h6>
+              <h6>2023/9 - 2024/4</h6>
+              <h5>Traning</h5>
+              <p>Full Stack Laravel</p>
+            </li>
+            <li>
+              <h6>2024/5 - 2024/10</h6>
               <h5>Intern</h5>
-              <p>Web Developer Laravel</p>
+              <p>Web Development Laravel</p>
             </li>
             <li>
-              <h6>2019 - 2021</h6>
-              <h5>Freelance Wev Development</h5>
-              <p>Fiverr and Upwork</p>
+              <h6>2024/11 - Present</h6>
+              <h5>Fullstack Developer</h5>
+              <p>Soft Deal IT</p>
             </li>
             <li>
-              <h6>2021 - 2022</h6>
-              <h5>Frontend Developer</h5>
-              <p>ARLS Dev</p>
-            </li>
-            <li>
-              <h6>2022 - 2024</h6>
+              <h6>2024/6 - Present</h6>
               <h5>Fullstack Freelancer</h5>
-              <p>ARLS Dev</p>
+              <p>Out of Marketplace</p>
             </li>
           </ul>`
 
@@ -62,24 +62,24 @@ resumeRight.innerHTML = experienceContent;
 
 const educationBtn = document.querySelector('.education_btn');
 const educationContent = `<h4>Education</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores.</p>
+                <p>Completed Diploma in Engineering (Computer) with expertise in web development, Laravel, and software solutions.</p>
                 <ul>
                     <li>
-                        <h5>College Education</h5>
+                        <h5>Diploma Education</h5>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas maiores qui doloremque accusantium atque vero facilis.
+                            Completed Diploma in Computer Engineering from Bangladesh Polytechnic Institute (BTEB) with a CGPA of 3.80 out of 4.00 in 2024.
                         </p>
                     </li>
                     <li>
-                        <h5>Frontend Education</h5>
+                        <h5>Higher Secondary Education</h5>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas maiores qui doloremque accusantium atque vero facilis.
+                            Completed Higher Secondary Education (HSC) in Humanities from Rajabari Degree College, Rajshahi Board, with a CGPA of 4.58 out of 5.00 in 2020.
                         </p>
                     </li>
                     <li>
-                        <h5>Backend Education</h5>
+                        <h5>Secondary School Education</h5>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas maiores qui doloremque accusantium atque vero facilis.
+                            Completed Secondary School Certificate (SSC) in Science from Muraripur High School, Rajshahi Board, with a CGPA of 4.22 out of 5.00 in 2018.
                         </p>
                     </li>
                 </ul>`
@@ -99,7 +99,7 @@ educationBtn.addEventListener('click', () => {
 
 const skillsBtn = document.querySelector('.skills_btn');
 const skillsContent = `<h4>Skills</h4>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Proficient in PHP, JavaScript, Laravel, Vue.js, Bootstrap, Tailwind CSS, MySQL, SQL Server, with expertise in RESTful APIs, MVC Architecture, Git, GitHub, Trello, and SDLC concepts.</p>
                 <ul>
                     <li><img src="assets/react.webp" alt="ReactJS logo"></li>
                     <li><img src="assets/next.png" alt="NextJS logo"></li>
@@ -124,23 +124,23 @@ skillsBtn.addEventListener('click', () => {
 
 const aboutBtn = document.querySelector('.about_btn');
 const aboutContent = `<h4>About me</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit debitis excepturi quibusdam.</p>
+                <p>I am a skilled Laravel full-stack developer with expertise in PHP, MySQL, web development, digital marketing, and project management. I specialize in creating efficient web applications and driving business growth through technology.</p>
                 <ul>
                     <li>
                         <h6>Name:</h6>
-                        <h5>Ernest Achiever</h5>
+                        <h5>Asikur Rahman</h5>
                     </li>
                     <li>
                         <h6>Experience:</h6>
-                        <h5>6+ years</h5>
+                        <h5>1+ years</h5>
                     </li>
                     <li>
                         <h6>Email:</h6>
-                        <h5>youremail@gmail.com</h5>
+                        <h5>asikur58039@gmail.com</h5>
                     </li>
                     <li>
                         <h6>Nationality:</h6>
-                        <h5>Ghanaian</h5>
+                        <h5>Bangladeshi</h5>
                     </li>
                     <li>
                         <h6>Freelance & collabs:</h6>
@@ -148,15 +148,15 @@ const aboutContent = `<h4>About me</h4>
                     </li>
                     <li>
                         <h6>Language:</h6>
-                        <h5>English</h5>
+                        <h5>Bangla & English</h5>
                     </li>
                     <li>
                         <h6>Phone:</h6>
-                        <h5>+233557097546</h5>
+                        <h5>01824580580</h5>
                     </li>
                     <li>
                         <h6>LinkedIn:</h6>
-                        <h5>@yourhandle</h5>
+                        <h5>@sr-asikur-rahman</h5>
                     </li>
                 </ul>`
 aboutBtn.addEventListener('click', () => {
