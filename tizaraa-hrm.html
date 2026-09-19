@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Tizaraa HRM Case Study — Asikur Rahman</title>
+    <meta name="description" content="Case study: multi-company enterprise HRM built with Laravel 10. Payroll engine built from scratch, attendance, leave, shift roster, department-scoped RBAC, and HR reporting.">
+    <meta property="og:title" content="Tizaraa HRM — Enterprise Human Resource Management System">
+    <meta property="og:description" content="Backend case study by Asikur Rahman: payroll engine, effective-dated salaries, attendance-driven calculation, department-scoped RBAC.">
+    <meta property="og:type" content="article">
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/4461893c3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts (montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+    <!-- apply saved theme before paint -->
+    <script>
+      if (localStorage.getItem('portfolio-theme') === 'dark-theme-variables') {
+        document.body.className = 'dark-theme-variables';
+      }
+    </script>
+
+    <!-- ================== navbar ===================== -->
+    <nav>
+      <div class="container nav_container">
+          <a href="index.html">ARLS</a>
+          <button class="nav_theme-btn" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ================== case header ===================== -->
+
+    <header class="case_header">
+      <div class="container">
+        <a href="index.html#projects" class="case_back"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+        <span class="case_eyebrow">Case Study · Tizaraa</span>
+        <h1>Tizaraa HRM — Enterprise Human Resource Management System</h1>
+        <p>
+          A multi-company enterprise HRM platform built with Laravel 10. It manages the full employee lifecycle: onboarding, attendance, leave, shift scheduling, payroll, and HR analytics. Admin, HR, department heads, and employees each get role-based, department-scoped data access.
+        </p>
+        <div class="case_facts">
+          <div>
+            <h6>My role</h6>
+            <h5>Backend Developer (HR module owner)</h5>
+          </div>
+          <div>
+            <h6>Period</h6>
+            <h5>May 2025 – Present</h5>
+          </div>
+          <div>
+            <h6>Stack</h6>
+            <h5>Laravel 10 · PHP 8.2 · MySQL</h5>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================== role ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-user-gear"></i>My Role</h2>
+        <p class="case_lead">
+          The system replaced manual, spreadsheet-based HR operations with a centralized, rule-driven platform. I owned the HR modules on the backend.
+        </p>
+        <ul class="case_list">
+          <li>Built the entire payroll system from scratch</li>
+          <li>Owned core HR modules: Employee, Attendance, Leave, Late Apply, Attendance Correction, Shift Roster</li>
+          <li>Designed the database schema and migrations (~260+)</li>
+          <li>Implemented approval workflows and RBAC rules</li>
+          <li>Developed reporting, exports, and document generation</li>
+          <li>Wrote internal technical documentation used by the team</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================== features ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-layer-group"></i>Key Features</h2>
+        <p class="case_lead">Payroll is the core module. Everything else feeds into it.</p>
+
+        <div class="case_grid">
+          <article class="case_card">
+            <h5>Payroll Engine</h5>
+            <ul>
+              <li>Salary structure engine: earnings &amp; deductions with fixed / percentage rules</li>
+              <li>Versioned salary assignments with effective dates (full salary history)</li>
+              <li>Weekly / monthly cycles, department-wise or employee-wise</li>
+              <li>Transaction-safe, idempotent cycle generation</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Attendance-Driven Salary</h5>
+            <ul>
+              <li>Salary calculated from present, leave, absence, and late rules</li>
+              <li>Late deduction policy: 3 lates = 1 deduction day</li>
+              <li>One attendance summary engine shared by payroll, reports, and exports</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Payroll Documents</h5>
+            <ul>
+              <li>Payslip PDF</li>
+              <li>Salary sheet (PDF / Excel)</li>
+              <li>Salary certificates</li>
+              <li>Finance-ready bank disbursement files</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>HR Lifecycle</h5>
+            <ul>
+              <li>Employee management with structured profiles</li>
+              <li>Leave, late, and attendance correction workflows</li>
+              <li>Shift roster management</li>
+              <li>Multi-level approval: manager &rarr; final approver</li>
+              <li>Full audit trail of all HR actions</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Role &amp; Department Access</h5>
+            <ul>
+              <li>Granular RBAC with 5 permission levels: <code>added</code>, <code>owned</code>, <code>both</code>, <code>all</code>, <code>none</code></li>
+              <li>Department-scoped access to employee and HR data</li>
+              <li>Parent-department filtering for hierarchical organizations</li>
+              <li>Per-user permission overrides for special cases</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Reporting &amp; Export</h5>
+            <ul>
+              <li>Filter-based Excel exports (leave, attendance, payroll, late requests)</li>
+              <li>Payroll summaries and missing-data reports</li>
+              <li>Leave cards and HR letters (PDF with company letterhead)</li>
+              <li>Attendance and salary breakdown reports</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Security &amp; Authentication</h5>
+            <ul>
+              <li>OTP-based admin login</li>
+              <li>Configurable session expiry for sensitive roles</li>
+              <li>Secure API authentication with Sanctum / Fortify</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== tech stack ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-screwdriver-wrench"></i>Tech Stack</h2>
+        <p class="case_lead">
+          Modular Laravel application (nwidart/laravel-modules) with Laravel Queues and a Blade + Bootstrap 4 frontend.
+        </p>
+        <ul class="chips">
+          <li>Laravel 10</li>
+          <li>PHP 8.2</li>
+          <li>MySQL</li>
+          <li>Eloquent ORM</li>
+          <li>Laravel Fortify</li>
+          <li>Sanctum</li>
+          <li>Trebol Entrust (RBAC)</li>
+          <li>Yajra DataTables</li>
+          <li>Maatwebsite Excel</li>
+          <li>PhpSpreadsheet</li>
+          <li>DomPDF</li>
+          <li>Laravel Queues</li>
+          <li>Pusher / Echo</li>
+          <li>Spatie Activity Log</li>
+          <li>nwidart/laravel-modules</li>
+          <li>Blade</li>
+          <li>Bootstrap 4</li>
+          <li>SASS</li>
+          <li>Laravel Mix</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================== challenges ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-brain"></i>Key Challenges &amp; Solutions</h2>
+        <p class="case_lead">Problems I ran into while building the HR modules, and how I fixed them.</p>
+        <div class="case_grid">
+          <article class="case_card case_challenge">
+            <h5>Accurate, Repeatable Payroll</h5>
+            <p>Payroll must never duplicate or lose records.</p>
+            <p><strong>Solution:</strong> transaction-based cycle generation with idempotent checks, and per-component breakdown storage for full auditability.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Mid-Cycle Salary Changes</h5>
+            <p>Promotions and increments affected historical payroll correctness.</p>
+            <p><strong>Solution:</strong> effective-dated salary assignments, so payroll always reflects the actual salary at the time of service.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Payroll vs Attendance Mismatch</h5>
+            <p>Manual reconciliation created inconsistencies.</p>
+            <p><strong>Solution:</strong> one attendance summary engine shared across payroll, reports, and exports.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Broken Approval Authorization</h5>
+            <p>In the legacy flow, managers could approve outside their scope.</p>
+            <p><strong>Solution:</strong> a new <code>employee_approval_permissions</code> table that separates request routing from final authorization.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Department Data Leakage Risk</h5>
+            <p>The global <code>all</code> permission exposed unintended data.</p>
+            <p><strong>Solution:</strong> a parent-department access layer for scoped visibility, without breaking the existing permission model.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Large Legacy Codebase</h5>
+            <p>200+ controllers made impact analysis difficult.</p>
+            <p><strong>Solution:</strong> technical documentation (routes, schema, HR manual) used as the system reference for safe development.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== impact ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-chart-line"></i>Impact</h2>
+        <ul class="case_list">
+          <li>Replaced manual payroll and attendance processing with a fully automated engine</li>
+          <li>Reduced month-end HR workload through automated salary generation and export</li>
+          <li>Eliminated inconsistencies between attendance and payroll calculations</li>
+          <li>Improved HR approval accuracy with structured hierarchy enforcement</li>
+          <li>Enabled department-scoped, secure HR data access</li>
+          <li>Provided finance-ready payroll and bank disbursement outputs</li>
+          <li>Established system documentation used as an internal engineering reference</li>
+        </ul>
+        <br>
+        <p class="case_note">
+          <i class="fa-solid fa-lock"></i>
+          Source code is private due to client confidentiality.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const themeToggler = document.querySelector('.nav_theme-btn');
+      const setThemeIcon = () => {
+        const dark = document.body.classList.contains('dark-theme-variables');
+        themeToggler.innerHTML = `<i class="fa-solid fa-${dark ? 'sun' : 'moon'}"></i>`;
+      };
+      setThemeIcon();
+      themeToggler.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme-variables');
+        const dark = document.body.classList.contains('dark-theme-variables');
+        localStorage.setItem('portfolio-theme', dark ? 'dark-theme-variables' : '');
+        setThemeIcon();
+      });
+    </script>
+  </body>
+</html>
