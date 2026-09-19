@@ -386,14 +386,55 @@ header {
     margin-top: 0;
 }
 
-/* skills */
-.resume_right.skills ul {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+/* experience */
+.resume_right.experience ul {
+    grid-template-columns: 1fr;
 }
 
-.resume_right.skills ul li {
-    padding: 1rem;
+.resume_right .exp_points {
+    display: block;
+    margin: 0.8rem 0;
+}
+
+.resume_right .exp_points li {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    margin-left: 1.2rem;
+    list-style: disc;
+}
+
+.resume_right li small {
+    color: var(--color-gray-500);
+    font-weight: 600;
+}
+
+/* skills */
+.resume_right.skills .skills_groups li h5 {
+    margin-bottom: 0;
+}
+
+.resume_right.skills .skills_logos {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.resume_right.skills .skills_logos li {
+    padding: 0.6rem;
+}
+
+/* projects without screenshot */
+.project.no-image {
+    padding-top: 1.5rem;
+}
+
+.project_meta {
+    display: block;
+    padding: 0 1.2rem;
+    color: var(--color-gray-500);
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 /* about */
@@ -529,6 +570,15 @@ header {
     aspect-ratio: 1/1;
     border-radius: 0.6rem;
     overflow: hidden;
+}
+
+.highlight_icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: var(--color-primary);
+    color: white;
+    font-size: 1.1rem;
 }
 
 .swipr-pagination-bullet {
@@ -672,9 +722,9 @@ form button {
         grid-template-columns: 1fr;        
     }
 
-    .resume_right.skills ul {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
+    .resume_right.skills .skills_logos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
     }
 
     .resume_right.about ul {

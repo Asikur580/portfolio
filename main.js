@@ -19,35 +19,41 @@ floatingNavs.forEach(nav => {
 const resumeRight = document.querySelector('.resume_right');
 const experienceContent = `<h4>Experience</h4>
           <p>
-            Experienced Laravel full-stack developer skilled in building custom web applications, eCommerce platforms, APIs, SaaS solutions, optimizing performance, and ensuring security, scalability, and seamless user experiences for diverse business needs.
+            2+ years of hands-on experience building scalable, enterprise-level web applications with Laravel, REST APIs, and well-designed databases.
           </p>
           <ul>
             <li>
-              <h6>2023/9 - 2024/4</h6>
-              <h5>Traning</h5>
-              <p>Full Stack Laravel</p>
+              <h6>May 2025 - Present</h6>
+              <h5>Executive, Software Engineer (Backend)</h5>
+              <p>Tizaraa</p>
+              <ul class="exp_points">
+                <li>Developed a complete HRM system (Employee, Attendance, Leave, Payroll)</li>
+                <li>Built backend for Daiki CRM (Agreement, Quotation, Supply Management)</li>
+                <li>Worked on Approval Workflow System (Expense, Travel, Payment Requests)</li>
+                <li>Updated APIs for multi-country support in STP project</li>
+                <li>Contributed to eCommerce admin panel modules</li>
+                <li>Currently working on QC project backend APIs</li>
+              </ul>
+              <small>Tech: Laravel, MySQL, Git, REST API, Server Management</small>
             </li>
             <li>
-              <h6>2024/5 - 2024/10</h6>
-              <h5>Intern</h5>
-              <p>Web Development Laravel</p>
-            </li>
-            <li>
-              <h6>2024/11 - Present</h6>
-              <h5>Fullstack Developer</h5>
+              <h6>Oct 2024 - Apr 2025</h6>
+              <h5>Laravel Backend Developer</h5>
               <p>Soft Deal IT</p>
-            </li>
-            <li>
-              <h6>2024/6 - Present</h6>
-              <h5>Fullstack Freelancer</h5>
-              <p>Out of Marketplace</p>
+              <ul class="exp_points">
+                <li>Designed and developed REST APIs</li>
+                <li>Built authentication systems</li>
+                <li>Optimized database structure and performance</li>
+                <li>Delivered client projects with new features and bug fixes</li>
+              </ul>
+              <small>Tech: Laravel, MySQL, Git, Postman</small>
             </li>
           </ul>`
 
 const experienceBtn = document.querySelector('.experience_btn');
 experienceBtn.addEventListener('click', () => {
     resumeRight.innerHTML = experienceContent;
-    resumeRight.className = "resume_right";
+    resumeRight.className = "resume_right experience";
     experienceBtn.classList.add('primary');
     //remove classes from other buttons
     aboutBtn.classList.remove('primary');
@@ -56,30 +62,31 @@ experienceBtn.addEventListener('click', () => {
 })
 // set experience content as the default content for resume right when page loads
 resumeRight.innerHTML = experienceContent;
+resumeRight.className = "resume_right experience";
 
 
 // education
 
 const educationBtn = document.querySelector('.education_btn');
 const educationContent = `<h4>Education</h4>
-                <p>Completed Diploma in Engineering (Computer) with expertise in web development, Laravel, and software solutions.</p>
+                <p>Diploma in Computer Technology, backed by professional training in software quality assurance.</p>
                 <ul>
                     <li>
-                        <h5>Diploma Education</h5>
+                        <h5>Diploma in Computer Technology</h5>
                         <p>
-                            Completed Diploma in Computer Engineering from Bangladesh Polytechnic Institute (BTEB) with a CGPA of 3.80 out of 4.00 in 2024.
+                            Bangladesh Polytechnic Institute &mdash; CGPA 3.81 out of 4.00.
                         </p>
                     </li>
                     <li>
-                        <h5>Higher Secondary Education</h5>
+                        <h5>HSC (Humanities)</h5>
                         <p>
-                            Completed Higher Secondary Education (HSC) in Humanities from Rajabari Degree College, Rajshahi Board, with a CGPA of 4.58 out of 5.00 in 2020.
+                            Rajabari Degree College &mdash; GPA 4.58 out of 5.00.
                         </p>
                     </li>
                     <li>
-                        <h5>Secondary School Education</h5>
+                        <h5>SQA Training</h5>
                         <p>
-                            Completed Secondary School Certificate (SSC) in Science from Muraripur High School, Rajshahi Board, with a CGPA of 4.22 out of 5.00 in 2018.
+                            Completed SQA (Manual &amp; Automation Testing) training, with experience in API testing and automation using Python.
                         </p>
                     </li>
                 </ul>`
@@ -99,18 +106,41 @@ educationBtn.addEventListener('click', () => {
 
 const skillsBtn = document.querySelector('.skills_btn');
 const skillsContent = `<h4>Skills</h4>
-                <p>Proficient in PHP, JavaScript, Laravel, Vue.js, Bootstrap, Tailwind CSS, MySQL, SQL Server, with expertise in RESTful APIs, MVC Architecture, Git, GitHub, Trello, and SDLC concepts.</p>
-                <ul>
+                <p>Backend-focused, with strong experience in REST API development, database design, and authentication systems.</p>
+                <ul class="skills_groups">
+                    <li>
+                        <h6>Programming</h6>
+                        <h5>PHP, JavaScript, Python</h5>
+                    </li>
+                    <li>
+                        <h6>Backend</h6>
+                        <h5>Laravel, NestJS, Express.js, FastAPI</h5>
+                    </li>
+                    <li>
+                        <h6>Frontend</h6>
+                        <h5>React.js, Next.js, Vue.js</h5>
+                    </li>
+                    <li>
+                        <h6>Databases</h6>
+                        <h5>MySQL, PostgreSQL, MongoDB</h5>
+                    </li>
+                    <li>
+                        <h6>Tools</h6>
+                        <h5>Git, GitHub, Postman, Copilot, Cursor, Claude</h5>
+                    </li>
+                    <li>
+                        <h6>Others</h6>
+                        <h5>REST API, Sanctum, RBAC, System Design &amp; Debugging</h5>
+                    </li>
+                </ul>
+                <ul class="skills_logos">
                     <li><img src="assets/php.png" alt="PHP logo"></li>
                     <li><img src="assets/javascript.png" alt="JavaScript logo"></li>
                     <li><img src="assets/laravel.png" alt="Laravel logo"></li>
-                    <li><img src="assets/vuejs.png" alt="VueJs logo"></li>
                     <li><img src="assets/react.webp" alt="ReactJS logo"></li>
                     <li><img src="assets/nextjs.png" alt="NextJS logo"></li>
-                    <li><img src="assets/bootstrap.png" alt="Bootstrap logo"></li>
-                    <li><img src="assets/tailwind.png" alt="Tailwind logo"></li>
+                    <li><img src="assets/vuejs.png" alt="VueJs logo"></li>
                     <li><img src="assets/github.png" alt="GitHub logo"></li>
-                    <li><img src="assets/jwt.png" alt="JWT logo"></li>
                 </ul>`
 
 skillsBtn.addEventListener('click', () => {
@@ -127,7 +157,7 @@ skillsBtn.addEventListener('click', () => {
 
 const aboutBtn = document.querySelector('.about_btn');
 const aboutContent = `<h4>About me</h4>
-                <p>I am a skilled Laravel full-stack developer with expertise in PHP, MySQL, web development, digital marketing, and project management. I specialize in creating efficient web applications and driving business growth through technology.</p>
+                <p>I am a Backend-focused Software Engineer with 2+ years of hands-on experience in building scalable web applications. I specialize in Laravel-based systems, REST API development, and database design. Currently at Tizaraa, I have contributed to enterprise-level HRM, CRM, approval workflow, and eCommerce platforms. I am passionate about clean, efficient code and keep learning modern technologies like NestJS, FastAPI, and the React ecosystem.</p>
                 <ul>
                     <li>
                         <h6>Name:</h6>
@@ -135,7 +165,11 @@ const aboutContent = `<h4>About me</h4>
                     </li>
                     <li>
                         <h6>Experience:</h6>
-                        <h5>1+ years</h5>
+                        <h5>2+ years</h5>
+                    </li>
+                    <li>
+                        <h6>Company:</h6>
+                        <h5>Tizaraa</h5>
                     </li>
                     <li>
                         <h6>Email:</h6>
@@ -159,7 +193,7 @@ const aboutContent = `<h4>About me</h4>
                     </li>
                     <li>
                         <h6>LinkedIn:</h6>
-                        <h5>@sr-asikur-rahman</h5>
+                        <h5>@asikur-rahman-webdeveloper</h5>
                     </li>
                 </ul>`
 aboutBtn.addEventListener('click', () => {
