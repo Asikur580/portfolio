@@ -531,6 +531,181 @@ header {
     padding: 0.6rem 1rem;
 }
 
+.project-cta--case {
+    margin-top: 1.2rem;
+}
+
+.project-cta--case a {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+}
+
+/* ===================== case study page =========== */
+
+.case_header {
+    margin-top: 3rem;
+    height: auto;
+    display: block;
+    padding: 6rem 0 4rem;
+    background: var(--color-gray-50);
+}
+
+.case_back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.case_eyebrow {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+}
+
+.case_header h1 {
+    font-size: 2.4rem;
+    margin: 0.6rem 0 1rem;
+}
+
+.case_header>.container>p {
+    max-width: 46rem;
+    font-size: 1rem;
+}
+
+.case_facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.case_facts div {
+    background: var(--color-gray-0);
+    padding: 1.2rem 1.5rem;
+}
+
+.case_facts h6 {
+    color: var(--color-gray-500);
+    margin-bottom: 0.4rem;
+}
+
+.case_section {
+    padding: 5rem 0;
+}
+
+.case_section h2 {
+    margin-bottom: 0.6rem;
+}
+
+.case_section h2 i {
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+}
+
+.case_lead {
+    max-width: 46rem;
+    margin-bottom: 2rem;
+}
+
+.case_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 1.5rem;
+}
+
+.case_card {
+    background: var(--color-gray-100);
+    padding: 1.5rem;
+    border-top: 3px solid var(--color-primary);
+}
+
+section:nth-child(even) .case_card {
+    background: var(--color-gray-0);
+}
+
+.case_card h5 {
+    margin-bottom: 0.8rem;
+}
+
+.case_card ul li,
+.case_list li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.case_card ul li::before,
+.case_list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: var(--color-primary);
+}
+
+.case_card code,
+.case_flow code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+
+.case_flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 2.5rem;
+}
+
+.case_flow code {
+    background: var(--color-gray-0);
+    border: 1px solid var(--color-primary-variant);
+    padding: 0.4rem 0.8rem;
+}
+
+.case_flow i {
+    color: var(--color-gray-400);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.chips li {
+    background: var(--color-gray-0);
+    border: 1px solid var(--color-gray-200);
+    padding: 0.35rem 0.9rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.case_challenge p+p {
+    margin-top: 0.6rem;
+}
+
+.case_challenge strong {
+    color: var(--color-primary);
+}
+
+.case_note {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    background: var(--color-gray-100);
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid var(--color-primary);
+}
+
 
 /* ===================== swiper js =========== */
 
@@ -745,6 +920,23 @@ form button {
 
     .faqs_container {
         grid-template-columns: 1fr;
+    }
+
+    .case_header {
+        margin-top: 4rem;
+        padding: 3rem 0;
+    }
+
+    .case_header h1 {
+        font-size: 1.7rem;
+    }
+
+    .case_facts {
+        grid-template-columns: 1fr;
+    }
+
+    .case_section {
+        padding: 3.5rem 0;
     }
 
     form button {

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Daiki ERP CRM Case Study — Asikur Rahman</title>
+    <meta name="description" content="Case study: CRM and service contract module for a multi-company ERP. Agreement lifecycle, renewal reminders, customer portal, invoicing, and RBAC built with Laravel 9, MySQL, and Redis.">
+    <meta property="og:title" content="Daiki ERP — CRM & Service Contract Module">
+    <meta property="og:description" content="Backend case study by Asikur Rahman: Laravel 9, MySQL, Redis, queued jobs, RBAC with 37+ permissions.">
+    <meta property="og:type" content="article">
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/4461893c3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts (montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+    <!-- apply saved theme before paint -->
+    <script>
+      if (localStorage.getItem('portfolio-theme') === 'dark-theme-variables') {
+        document.body.className = 'dark-theme-variables';
+      }
+    </script>
+
+    <!-- ================== navbar ===================== -->
+    <nav>
+      <div class="container nav_container">
+          <a href="index.html">ARLS</a>
+          <button class="nav_theme-btn" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ================== case header ===================== -->
+
+    <header class="case_header">
+      <div class="container">
+        <a href="index.html#projects" class="case_back"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+        <span class="case_eyebrow">Case Study · Tizaraa</span>
+        <h1>Daiki ERP — CRM &amp; Service Contract Module</h1>
+        <p>
+          A CRM module built inside a multi-company ERP system for an industrial water-treatment and maintenance business. It manages the complete lifecycle of service contracts: agreements, renewals, repair quotations, chlorine supply operations, invoicing, and payment collection.
+        </p>
+        <div class="case_facts">
+          <div>
+            <h6>My role</h6>
+            <h5>Backend Developer (sole owner of CRM module)</h5>
+          </div>
+          <div>
+            <h6>Replaced</h6>
+            <h5>Manual spreadsheet-based workflow</h5>
+          </div>
+          <div>
+            <h6>Stack</h6>
+            <h5>Laravel 9 · MySQL · Redis · Docker</h5>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================== role ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-user-gear"></i>My Role</h2>
+        <p class="case_lead">
+          Before this module, contract tracking, customer approvals, and payment follow-ups were handled manually in spreadsheets. I owned the backend of the CRM module end to end.
+        </p>
+        <ul class="case_list">
+          <li>Designed the full database architecture and relationships</li>
+          <li>Built REST APIs for all CRM operations</li>
+          <li>Implemented the approval workflow state machine</li>
+          <li>Developed the notification and reminder system</li>
+          <li>Designed the RBAC permission structure (37+ permissions)</li>
+          <li>Worked closely with the frontend team on API contracts</li>
+          <li>Built the reporting and export system</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================== features ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-layer-group"></i>Key Features</h2>
+        <p class="case_lead">Agreement lifecycle, controlled by a server-side state machine:</p>
+        <div class="case_flow">
+          <code>pending_hod</code><i class="fa-solid fa-arrow-right"></i>
+          <code>sent_customer</code><i class="fa-solid fa-arrow-right"></i>
+          <code>approved / rejected</code><i class="fa-solid fa-arrow-right"></i>
+          <code>active</code><i class="fa-solid fa-arrow-right"></i>
+          <code>suspended</code>
+        </div>
+
+        <div class="case_grid">
+          <article class="case_card">
+            <h5>Agreement Lifecycle</h5>
+            <ul>
+              <li>Full agreement CRUD with a controlled state machine</li>
+              <li>Automatic renewal support for expired contracts</li>
+              <li>Server-side action flags: <code>can_edit</code>, <code>can_approve</code>, <code>can_renew</code>, <code>can_suspend</code></li>
+              <li>UI fully driven by backend rules (single source of truth)</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Smart Renewal Reminders</h5>
+            <ul>
+              <li>Per-agreement "days before expiry" offsets</li>
+              <li>Each reminder stored individually and triggered once</li>
+              <li>Daily scheduler processes due reminders</li>
+              <li>Email + in-app notifications via queued jobs</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Pending Follow-ups</h5>
+            <ul>
+              <li>Separate tracking for unresponsive quotations and agreements</li>
+              <li>Manual + automatic reminder triggers</li>
+              <li>Centralized follow-up view for the sales team</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Repair Quotations</h5>
+            <ul>
+              <li>Line-item based quotation system</li>
+              <li>Item master + unit management</li>
+              <li>Approval, rejection, and completion workflow</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Chlorine Supply Tracking</h5>
+            <ul>
+              <li>Delivery management with responsible team tracking</li>
+              <li>Delivery completion with proof uploads</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Invoicing &amp; Payments</h5>
+            <ul>
+              <li>Invoices with multiple line items</li>
+              <li>Partial payments with running balance tracking</li>
+              <li>Payment slip uploads</li>
+              <li>Auto-settlement for fully paid invoices</li>
+              <li>PDF receipt generation</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Customer Portal</h5>
+            <ul>
+              <li>Secure customer-facing portal</li>
+              <li>Customers view and approve / reject documents</li>
+              <li>Digital signature upload as approval proof</li>
+              <li>Strict data isolation per customer identity</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Dashboard &amp; Reporting</h5>
+            <ul>
+              <li>KPI-based CRM dashboard</li>
+              <li>Agreement status analytics</li>
+              <li>Expired contract tracking</li>
+              <li>Company-wise filtering and monthly performance</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Role-Based Access Control</h5>
+            <ul>
+              <li>37+ fine-grained permissions</li>
+              <li>Admin / Manager / Representative roles</li>
+              <li>Middleware-based route protection</li>
+            </ul>
+          </article>
+
+          <article class="case_card">
+            <h5>Export &amp; Audit</h5>
+            <ul>
+              <li>Excel export filtered by role and scope</li>
+              <li>Activity logs for all CRM actions</li>
+              <li>Full audit trail per entity</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== tech stack ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-screwdriver-wrench"></i>Tech Stack</h2>
+        <p class="case_lead">
+          Architecture: Controller &rarr; Service / Repository pattern with queued jobs, form requests, and custom validation rules.
+        </p>
+        <ul class="chips">
+          <li>PHP 8.1</li>
+          <li>Laravel 9</li>
+          <li>MySQL</li>
+          <li>Redis</li>
+          <li>JWT Auth</li>
+          <li>Spatie Permission</li>
+          <li>Spatie Activitylog</li>
+          <li>Maatwebsite Excel</li>
+          <li>DomPDF</li>
+          <li>Pusher</li>
+          <li>SendGrid</li>
+          <li>AWS S3 / MinIO</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================== challenges ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-brain"></i>Key Challenges &amp; Solutions</h2>
+        <p class="case_lead">Problems I ran into while building the module, and how I fixed them.</p>
+        <div class="case_grid">
+          <article class="case_card case_challenge">
+            <h5>Multi-Company Data Isolation</h5>
+            <p>Early versions had cross-company data leakage.</p>
+            <p><strong>Solution:</strong> a strict company-scoped query layer applied globally across all endpoints, so data stays safe even under filtering.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Duplicate Reminders</h5>
+            <p>Global scheduled reminders caused duplicates or missed alerts.</p>
+            <p><strong>Solution:</strong> per-agreement persisted reminder rows with idempotent execution.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Business Logic Duplication</h5>
+            <p>Frontend and backend both handled approval logic, causing inconsistencies.</p>
+            <p><strong>Solution:</strong> all rules moved to backend computed flags, making the API the single source of truth.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Email Blocking API Responses</h5>
+            <p>Synchronous email sending slowed API responses.</p>
+            <p><strong>Solution:</strong> all notifications migrated to queued jobs with background processing.</p>
+          </article>
+
+          <article class="case_card case_challenge">
+            <h5>Separate Approval Logic per Module</h5>
+            <p>Each module had its own approval logic.</p>
+            <p><strong>Solution:</strong> a polymorphic approval API (<code>type</code> / <code>id</code>) for unified workflow handling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== impact ===================== -->
+
+    <section class="case_section">
+      <div class="container">
+        <h2><i class="fa-solid fa-chart-line"></i>Impact</h2>
+        <ul class="case_list">
+          <li>Replaced a manual spreadsheet-based CRM workflow with a centralized system</li>
+          <li>Eliminated missed contract renewals through automated reminders</li>
+          <li>Reduced approval turnaround time via the customer portal workflow</li>
+          <li>Improved payment tracking with real-time dashboards</li>
+          <li>Enabled secure multi-company usage without data leakage</li>
+          <li>Established a fully traceable audit system for all CRM activities</li>
+        </ul>
+        <br>
+        <p class="case_note">
+          <i class="fa-solid fa-lock"></i>
+          Source code is private due to client confidentiality.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const themeToggler = document.querySelector('.nav_theme-btn');
+      const setThemeIcon = () => {
+        const dark = document.body.classList.contains('dark-theme-variables');
+        themeToggler.innerHTML = `<i class="fa-solid fa-${dark ? 'sun' : 'moon'}"></i>`;
+      };
+      setThemeIcon();
+      themeToggler.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme-variables');
+        const dark = document.body.classList.contains('dark-theme-variables');
+        localStorage.setItem('portfolio-theme', dark ? 'dark-theme-variables' : '');
+        setThemeIcon();
+      });
+    </script>
+  </body>
+</html>
