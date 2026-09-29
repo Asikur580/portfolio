@@ -1,543 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asikur Rahman — Backend Software Engineer (Laravel)</title>
-    <meta name="description" content="Asikur Rahman, Backend-focused Software Engineer with 2+ years of experience in Laravel, REST API development, and database design. HRM, CRM, approval workflow, and eCommerce systems.">
+    <meta name="description" content="Asikur Rahman, Backend-focused Software Engineer with 2+ years of experience in Laravel, REST API development, and database design. HRM, CRM, approval workflow, and ERP systems.">
     <meta property="og:title" content="Asikur Rahman — Backend Software Engineer">
     <meta property="og:description" content="Laravel, REST API, and database design. Building scalable enterprise web applications.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://asikur580.github.io/portfolio/">
-    <!-- font awesome cdn -->
-    <script
-      src="https://kit.fontawesome.com/4461893c3e.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- google fonts (montserrat) -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    >
-    <!-- Swiper js -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    >
-    <!-- animate on scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
-    <!-- Custom css -->
-    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- apply saved theme before paint -->
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
   </head>
   <body>
-    <!-- ================== navbar ===================== -->
-    <nav>
-      <div class="container nav_container">
-          <a href="index.html">ARLS</a>
-          <button class="nav_theme-btn">
-            <i class="fa-solid fa-moon"></i>
-        </button>
-      </div>
+    <script>
+      if (localStorage.getItem('portfolio-theme') === 'dark-theme-variables') {
+        document.body.className = 'dark-theme-variables';
+      }
+    </script>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ================== section index rail ===================== -->
+    <nav class="rail" aria-label="Section index">
+      <a href="#about" data-section="about">01</a>
+      <a href="#work" data-section="work">02</a>
+      <a href="#experience" data-section="experience">03</a>
+      <a href="#stack" data-section="stack">04</a>
+      <a href="#services" data-section="services">05</a>
+      <a href="#activity" data-section="activity">06</a>
+      <a href="#contact" data-section="contact">07</a>
     </nav>
 
-    <!-- ================== floating navbar ===================== -->
-
-    <menu class="floating_nav">
-      <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
-      <a href="#resume"><i class="fa-solid fa-user"></i></i></a>
-      <a href="#projects"><i class="fa-solid fa-image"></i></a>
-      <a href="#faqs"><i class="fa-solid fa-dizzy"></i></a>
-      <a href="#contact"><i class="fa-solid fa-phone"></i></a>
-    </menu>
-
-
     <!-- ================== header ===================== -->
+    <header class="site-header" id="top">
+      <div class="site-header__bar">
+        <a class="brand" href="#top">
+          <span class="brand__avatar"><img src="assets/asikur-court.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Asikur Rahman</span>
+            <span class="brand__role">BACKEND SOFTWARE ENGINEER</span>
+          </span>
+        </a>
 
-    <header>
-      <div class="header_container">
-        <div class="header_image" data-aos="fade-up" data-aos-delay="800">
-          <img src="assets/asikur-court.png" alt="Header Image">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#work" data-section="work">Work</a>
+          <a href="#experience" data-section="experience">Experience</a>
+          <a href="#stack" data-section="stack">Stack</a>
+          <a href="#services" data-section="services">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="#contact" data-section="contact">Contact</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <span class="status-pill"><span class="status-dot"></span>Open to work</span>
+          <button class="icon-btn nav_theme-btn" type="button" aria-label="Toggle dark mode">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <a class="btn btn--accent header-cv" href="assets/Asikur Rahman Software Engineer.pdf" download>
+            Download CV
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
+          </a>
+          <button class="icon-btn icon-btn--dark menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          </button>
         </div>
-        <h5 data-aos="fade-in">Hi, I'm Asikur Rahman</h5>
-        <h1 data-aos="fade-in">Backend <span>Software Engineer</span></h1>
-        <p data-aos="fade-in">
-          Backend-focused Software Engineer with 2+ years of hands-on experience building scalable web applications. I specialize in Laravel-based systems, REST API development, and database design. Currently at Tizaraa.
-        </p>
-        <div class="header_cta" data-aos="fade-in">
-          <a href="#projects" class="btn">My Projects</a>
-          <a href="assets/Asikur Rahman Software Engineer.pdf" class="btn primary">Download Cv</a>
-        </div>
-        <menu class="header_socials">
-          <a href="https://github.com/Asikur580"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.facebook.com/asikurrahmanars"><i class="fa-brands fa-facebook"></i></a>
-          <!-- <a href="https://dribbble.com"><i class="fa-brands fa-dribbble"></i></a> -->
-          <a href="https://www.linkedin.com/in/asikur-rahman-webdeveloper/"><i class="fa-brands fa-linkedin"></i></a>
-        </menu>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#stack">Stack</a>
+        <a href="#services">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--accent" href="assets/Asikur Rahman Software Engineer.pdf" download>Download CV</a>
       </div>
     </header>
 
-
-
-    <!-- ================== resume ===================== -->
-
-    <section id="resume">
-      <div class="container resume_container" data-aos="fade-in" data-aos-delay="200">
-        <div class="resume_left">
-          <h1>Why hire me?</h1>
-          <p>Backend engineer building secure, scalable enterprise systems: HRM, CRM, approval workflows, and eCommerce.</p>
-          <menu>
-            <button class="btn primary experience_btn">Experience</button>
-            <button class="btn education_btn">Education</button>
-            <button class="btn skills_btn">Skills</button>
-            <button class="btn about_btn">About me</button>
-          </menu>
-        </div>
-        <div class="resume_right">
-          
-        </div>
-      </div>
-    </section>
-
- <!-- ================== Projects ===================== -->
-
-<section class="projects" id="projects">
-  <h1>Recent Projects</h1>
-  <p>
-    Enterprise systems built at work (HRM, CRM, approval workflows, eCommerce, sales management) plus personal projects with live demos.
-  </p>
-  <menu class="projects_categories">
-    <button class="btn" data-filter="*">All</button>
-    <button class="btn" data-filter=".professional">Professional</button>
-    <button class="btn" data-filter=".frontend">Frontend</button>
-    <button class="btn" data-filter=".backend">Backend</button>
-    <button class="btn" data-filter=".fullstack">Fullstack</button>
-  </menu>
-  <div class="container projects_container" data-aos="fade-in" data-aos-delay="200">
-    <article class="project mix professional no-image" data-order="1">
-      <h5>Tizaraa HRM — Enterprise HR Management</h5>
-      <p>
-        HR module owner of a multi-company HRM. Built the payroll engine from scratch, plus attendance, leave, shift roster, and department-scoped RBAC.
-      </p>
-      <small class="project_meta">Laravel 10, PHP 8.2, MySQL</small>
-      <div class="project-cta project-cta--case">
-        <a href="tizaraa-hrm.html" class="btn primary">Case Study</a>
-      </div>
-    </article>
-
-    <article class="project mix professional no-image" data-order="1">
-      <h5>Daiki ERP — CRM &amp; Service Contract Module</h5>
-      <p>
-        Sole backend owner of a CRM module in a multi-company ERP. Agreement lifecycle, renewal reminders, quotations, invoicing, customer portal, and RBAC (37+ permissions).
-      </p>
-      <small class="project_meta">Laravel 9, MySQL, Redis, Docker</small>
-      <div class="project-cta project-cta--case">
-        <a href="daiki-crm.html" class="btn primary">Case Study</a>
-      </div>
-    </article>
-
-    <article class="project mix professional no-image" data-order="1">
-      <h5>Daiki ERP — Approval Process &amp; Expense Control</h5>
-      <p>
-        Core owner of a configurable approval engine for 10 request types. 12-level rule precedence, budget ledger, travel policy engine, and RBAC (~200 permissions).
-      </p>
-      <small class="project_meta">Laravel 9, MySQL, Redis, Docker</small>
-      <div class="project-cta project-cta--case">
-        <a href="daiki-approval.html" class="btn primary">Case Study</a>
-      </div>
-    </article>    
-
-    <article class="project mix professional fullstack no-image" data-order="1">
-      <h5>Radiant Agrovet ERP (v2) — Field Sales &amp; Distribution</h5>
-      <p>
-        Sole full-stack developer. Replaced a legacy PHP ERP (19 modules, 117 pages) and migrated live production data with zero financial mismatch.
-      </p>
-      <small class="project_meta">Laravel 13, React 19, TypeScript, MySQL 8</small>
-      <div class="project-cta project-cta--case">
-        <a href="radiant-erp.html" class="btn primary">Case Study</a>
-      </div>
-    </article>
-
-    <!-- <article class="project mix professional no-image" data-order="1">
-      <h5>Sales Management System (Ongoing)</h5>
-      <p>
-        RSM → Manager → Officer hierarchy with an order → approval → invoice → delivery workflow, credit system, and reporting.
-      </p>
-      <small class="project_meta">Tizaraa · Laravel, MySQL, REST API</small>
-    </article> -->
-    <!-- <article class="project mix fullstack" data-order="1">
-      <div class="project_image">
-        <img src="assets/appleshop.png" alt="Project One">
-      </div>
-      <h5>Ecommerce Project (Fullstack)</h5>
-      <p>
-        An eCommerce website with cart, wishlist, checkout, order tracking, and user-friendly shopping experience.
-      </p>
-      <div class="project-cta">
-        <a href="https://as.asikurrahman.com" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/appleShop" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article> -->
-
-    <!-- <article class="project mix fullstack" data-order="2">
-      <div class="project_image">
-        <img src="assets/giftos.png" alt="Project Two">
-      </div>
-      <h5>Ecommerce Project with dashboard (Fullstack)</h5>
-      <p>
-        An eCommerce website with a dashboard, cart, wishlist, checkout, order tracking, and a seamless shopping experience.
-      </p>
-      <div class="project-cta">
-        <a href="https://giftos.asikurrahman.com" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/giftos" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article> -->
-
-    <article class="project mix fullstack" data-order="3">
-      <div class="project_image">
-        <img src="assets/library.png" alt="Project Three">
-      </div>
-      <h5>Library Project with dashboard (Fullstack)</h5>
-      <p>
-        A library management system with a dashboard, book catalog, borrowing, returns, user management, and tracking.
-      </p>
-      <div class="project-cta">
-        <a href="https://library.asikurrahman.com" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/library" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article>
-
-    <article class="project mix fullstack" data-order="4">
-      <div class="project_image">
-        <img src="assets/pos.png" alt="Project Four">
-      </div>
-      <h5>Pos Project with dashboard (Fullstack)</h5>
-      <p>
-        A POS system with a dashboard, inventory management, billing, sales tracking, customer, and staff management.
-      </p>
-      <div class="project-cta">
-        <a href="https://pos.asikurrahman.com" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/Haji-hardware" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article>
-
-    <article class="project mix frontend" data-order="5">
-      <div class="project_image">
-        <img src="assets/dashboard.png" alt="Project Five">
-      </div>
-      <h5>Dashboard Project (Frontend)</h5>
-      <p>
-        A frontend dashboard with analytics, user management, notifications, charts, filters, and an interactive UI. 
-      </p>
-      <div class="project-cta">
-        <a href="https://asikurrahman.com/dashboard" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/dashboardCss" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article>
-
-    <article class="project mix frontend" data-order="6">
-      <div class="project_image">
-        <img src="assets/education.png" alt="Project Six">
-      </div>
-      <h5>Education Project (Frontend)</h5>
-      <p>
-        An educational frontend with courses, quizzes, student dashboard, progress tracking, and a responsive UI.
-      </p>
-      <div class="project-cta">
-        <a href="https://asikurrahman.com/education" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/education" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article>
-
-    <!-- <article class="project mix frontend" data-order="6">
-      <div class="project_image">
-        <img src="assets/portfolio1.png" alt="Project Six">
-      </div>
-      <h5>Portfolio Project (Frontend)</h5>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim possimus voluptas cum, eveniet exercitationem veritatis.
-      </p>
-      <div class="project-cta">
-        <a href="https://asikurrahman.com/portfolio1" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="https://github.com/Asikur580/protfolio" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article> -->
-
-    <article class="project mix backend" data-order="6">
-      <div class="project_image">
-        <img src="assets/radian.png" alt="Project Six">
-      </div>
-      <h5>Office Management Project (Backend)</h5>
-      <p>
-        An office management system with a dashboard, employee management, users, products, customers, suppliers and reports.
-      </p>
-      <div class="project-cta">
-        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="#" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article>
-
-    <article class="project mix backend" data-order="6">
-      <div class="project_image">
-        <img src="assets/saudia.png" alt="Project Six">
-      </div>
-      <h5>Tailor Management Project (Backend)</h5>
-      <p>
-        An shop management system with a dashboard, material, orders, customers and reports.
-      </p>
-      <div class="project-cta">
-        <a href="#" class="btn primary" target="_blank"><i class="fa-solid fa-link"></i></a>
-        <a href="#" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- highlights -->
-
-<section id="swiper">
-  <h1>What I deliver</h1>
-  <p>
-    Key results from 2+ years of backend work on enterprise HRM, CRM, approval workflow, and eCommerce systems.
-  </p>
-  <div class="container swiper">
-    <div class="swiper-wrapper">
-      <figure class="swiper-slide">
-        <figcaption>
-          Built a complete HRM system end to end: employee management, attendance API, leave, and payroll.
-        </figcaption>
-        <div class="swiper_client">
-          <div class="swiper_client-avater highlight_icon">
-            <i class="fa-solid fa-users-gear"></i>
+    <main id="main">
+      <!-- ================== hero ===================== -->
+      <section class="hero container">
+        <div class="hero__card">
+          <div class="hero__content">
+            <span class="hero__badge"><span class="status-dot"></span>Available for backend &amp; full-stack roles</span>
+            <h1 class="hero__title">I build the backend systems that <span>run real businesses.</span></h1>
+            <p class="hero__lead">
+              Laravel engineer with 2+ years shipping HRM, CRM, ERP and approval-workflow platforms — payroll engines, role-based access, REST APIs and the MySQL schemas underneath them.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--light btn--lg btn--icon-end" href="#work">
+                Read the case studies
+                <span class="btn__circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </a>
+              <a class="btn btn--outline-dark btn--lg" href="mailto:asikur58039@gmail.com">asikur58039@gmail.com</a>
+            </div>
+            <div class="hero__facts">
+              <div><span class="label">NOW</span><strong>Software Engineer (Backend), Tizaraa</strong></div>
+              <div><span class="label">FOCUS</span><strong>Laravel · REST · MySQL</strong></div>
+              <div><span class="label">ALSO</span><strong>React 19 · Next.js · TypeScript</strong></div>
+            </div>
           </div>
-          <div class="swiper_client-details">
-            <h5>HRM System</h5>
-            <small>Tizaraa</small>
+
+          <div class="hero__visual">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <img class="hero__portrait" src="assets/asikur-court.png" alt="Portrait of Asikur Rahman">
+            <div class="glass-chip glass-chip--top">
+              <span class="glass-chip__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>
+              <span><strong>Laravel 9 → 13</strong><small>4 production systems</small></span>
+            </div>
+            <div class="glass-chip glass-chip--bottom">
+              <span class="glass-chip__icon glass-chip__icon--ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+              <span><strong>~200 permissions</strong><small>one RBAC model</small></span>
+            </div>
+            <a class="spin-badge" href="#contact" aria-label="Open to work — contact me">
+              <svg class="spin-badge__ring" viewBox="0 0 136 136" aria-hidden="true">
+                <defs><path id="ring-path" d="M68,68 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs>
+                <text><textPath href="#ring-path">OPEN TO WORK · BACKEND · LARAVEL · 2026 · </textPath></text>
+              </svg>
+              <span class="spin-badge__core"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </a>
           </div>
         </div>
-      </figure>
+      </section>
 
-      <figure class="swiper-slide">
-        <figcaption>
-          Designed multi-step approval flows for payment requests, expenses, and travel requisitions, with reports.
-        </figcaption>
-        <div class="swiper_client">
-          <div class="swiper_client-avater highlight_icon">
-            <i class="fa-solid fa-diagram-project"></i>
+      <!-- ================== stats ===================== -->
+      <section class="stats container" aria-label="Highlights">
+        <div class="stat card reveal">
+          <span class="icon-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <strong class="stat__num">2+</strong>
+          <p>years building Laravel systems in production</p>
+        </div>
+        <div class="stat card reveal">
+          <span class="icon-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 20V9"/></svg></span>
+          <strong class="stat__num">4</strong>
+          <p>enterprise systems owned — HRM, CRM, Approval, ERP</p>
+        </div>
+        <div class="stat card reveal">
+          <span class="icon-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></span>
+          <strong class="stat__num">~200</strong>
+          <p>permissions designed in one RBAC model</p>
+        </div>
+        <div class="stat stat--accent reveal">
+          <span class="icon-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+          <strong class="stat__num">0</strong>
+          <p>financial mismatches after a live ERP data migration</p>
+        </div>
+      </section>
+
+      <!-- ================== about ===================== -->
+      <section class="section container" id="about">
+        <span class="eyebrow">01 — ABOUT</span>
+        <div class="about reveal">
+          <div class="about__main card">
+            <p class="about__quote">I like the unglamorous part of software: <span>the schema, the permission model, the payroll run</span> that has to be right every month.</p>
+            <p>At Tizaraa I own backend modules in multi-company platforms — an HR system with a payroll engine I built from scratch, a CRM for service contracts, and a configurable approval engine that replaced paper forms and Kissflow. On client work I've shipped a full ERP alone, Laravel API to React front end.</p>
           </div>
-          <div class="swiper_client-details">
-            <h5>Approval Workflows</h5>
-            <small>Tizaraa</small>
+          <ul class="about__facts">
+            <li>
+              <span class="icon-tile icon-tile--solid"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+              <div><span class="label">EDUCATION</span><strong>Diploma, Computer Technology — CGPA 3.81</strong></div>
+            </li>
+            <li>
+              <span class="icon-tile icon-tile--solid"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+              <div><span class="label">TRAINING</span><strong>SQA, manual &amp; automation</strong></div>
+            </li>
+            <li>
+              <span class="icon-tile icon-tile--solid"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+              <div><span class="label">LANGUAGES</span><strong>Bangla, English</strong></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================== work ===================== -->
+      <section class="section container" id="work">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">02 — SELECTED WORK</span>
+            <h2 class="section-title section-title--xl">Case studies</h2>
+          </div>
+          <p class="section-note">Enterprise work. Source code is private for client confidentiality — each case study walks through architecture, trade-offs and results.</p>
+        </div>
+
+        <div class="cases">
+          <a class="case case--featured reveal" href="tizaraa-hrm.html">
+            <div class="case__top">
+              <span class="tag tag--glass">01 · Featured</span>
+              <span class="arrow-btn arrow-btn--light"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </div>
+            <h3 class="case__title">Tizaraa HRM</h3>
+            <p class="case__desc">Payroll engine built from scratch; attendance-driven salary, leave, shift roster, department-scoped access.</p>
+            <div class="flow" aria-label="Workflow: attendance, leave, payroll run, payslip">
+              <span class="flow__step">attendance</span><span class="flow__line"></span>
+              <span class="flow__step">leave</span><span class="flow__line"></span>
+              <span class="flow__step">payroll run</span><span class="flow__line"></span>
+              <span class="flow__step flow__step--end">payslip</span>
+            </div>
+            <div class="case__tags">
+              <span class="tag tag--white">HR module owner</span>
+              <span class="tag tag--mono tag--outline-light">Laravel 10 · PHP 8.2 · MySQL</span>
+            </div>
+          </a>
+
+          <a class="case case--light reveal" href="daiki-crm.html">
+            <div class="case__top">
+              <span class="tag tag--muted tag--mono">02</span>
+              <span class="arrow-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </div>
+            <h3 class="case__title">Daiki ERP — CRM &amp; Service Contracts</h3>
+            <p class="case__desc">Replaced spreadsheet contract tracking: agreement state machine, renewal reminders, customer portal, invoicing.</p>
+            <div class="case__tags">
+              <span class="tag tag--accent">Sole backend owner</span>
+              <span class="tag tag--mono tag--outline">Laravel 9 · MySQL · Redis</span>
+            </div>
+          </a>
+
+          <a class="case case--light reveal" href="daiki-approval.html">
+            <div class="case__top">
+              <span class="tag tag--muted tag--mono">03</span>
+              <span class="arrow-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </div>
+            <h3 class="case__title">Daiki ERP — Approval &amp; Expense Control</h3>
+            <p class="case__desc">Configurable approval engine for 10 request types with 12-level rule precedence, budget ledger and travel policy.</p>
+            <div class="case__tags">
+              <span class="tag tag--accent">Core module owner</span>
+              <span class="tag tag--mono tag--outline">Laravel 9 · MySQL · Redis</span>
+            </div>
+          </a>
+
+          <a class="case case--dark reveal" href="radiant-erp.html">
+            <div class="case__top">
+              <span class="tag tag--dark tag--mono">04 · Client project</span>
+              <span class="arrow-btn arrow-btn--light"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </div>
+            <h3 class="case__title">Radiant Agrovet ERP v2</h3>
+            <p class="case__desc">Rebuilt a legacy PHP ERP alone — 19 modules, 117 pages — and migrated live production data with zero mismatch.</p>
+            <div class="case__metrics">
+              <div><strong>19</strong><span>modules</span></div>
+              <div><strong>117</strong><span>UI pages</span></div>
+              <div><strong>0</strong><span>data mismatches</span></div>
+            </div>
+            <div class="case__tags">
+              <span class="tag tag--white">Sole full-stack developer</span>
+              <span class="tag tag--mono tag--outline-dark">Laravel 13 · React 19 · TS</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="side-projects">
+          <div class="section-head section-head--row">
+            <h3 class="section-title section-title--sm">Side projects with live demos</h3>
+            <a class="btn btn--outline" href="https://github.com/Asikur58" target="_blank" rel="noopener">All projects on GitHub →</a>
+          </div>
+          <div class="projects">
+            <article class="project card reveal">
+              <div class="project__media"><img src="assets/library.png" alt="Library management system screenshot" loading="lazy"></div>
+              <div class="project__body">
+                <h4>Library Management</h4>
+                <p>Full-stack · catalog, borrowing, returns</p>
+              </div>
+              <div class="project__cta">
+                <a class="btn btn--dark btn--sm" href="https://library.asikurrahman.com" target="_blank" rel="noopener">Live demo</a>
+                <a class="btn btn--outline btn--sm" href="https://github.com/Asikur580/library" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+            <article class="project card reveal">
+              <div class="project__media"><img src="assets/pos.png" alt="Point of sale system screenshot" loading="lazy"></div>
+              <div class="project__body">
+                <h4>Point of Sale</h4>
+                <p>Full-stack · inventory, billing, sales</p>
+              </div>
+              <div class="project__cta">
+                <a class="btn btn--dark btn--sm" href="https://pos.asikurrahman.com" target="_blank" rel="noopener">Live demo</a>
+                <a class="btn btn--outline btn--sm" href="https://github.com/Asikur580/Haji-hardware" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+            <article class="project card reveal">
+              <div class="project__media"><img src="assets/dashboard.png" alt="Analytics dashboard screenshot" loading="lazy"></div>
+              <div class="project__body">
+                <h4>Analytics Dashboard</h4>
+                <p>Frontend · charts, filters, users</p>
+              </div>
+              <div class="project__cta">
+                <a class="btn btn--dark btn--sm" href="https://asikurrahman.com/dashboard" target="_blank" rel="noopener">Live demo</a>
+                <a class="btn btn--outline btn--sm" href="https://github.com/Asikur580/dashboardCss" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+            <article class="project card reveal">
+              <div class="project__media"><img src="assets/education.png" alt="Education platform screenshot" loading="lazy"></div>
+              <div class="project__body">
+                <h4>Education Platform</h4>
+                <p>Frontend · courses, quizzes, progress</p>
+              </div>
+              <div class="project__cta">
+                <a class="btn btn--dark btn--sm" href="https://asikurrahman.com/education" target="_blank" rel="noopener">Live demo</a>
+                <a class="btn btn--outline btn--sm" href="https://github.com/Asikur580/education" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
           </div>
         </div>
-      </figure>
+      </section>
 
-      <figure class="swiper-slide">
-        <figcaption>
-          Updated APIs to add multi-country support in the STP project.
-        </figcaption>
-        <div class="swiper_client">
-          <div class="swiper_client-avater highlight_icon">
-            <i class="fa-solid fa-globe"></i>
+      <!-- ================== experience ===================== -->
+      <section class="section container experience" id="experience">
+        <div class="experience__head">
+          <span class="eyebrow">03 — EXPERIENCE</span>
+          <h2 class="section-title">Where I've worked</h2>
+        </div>
+        <div class="experience__list">
+          <article class="job card reveal">
+            <div class="job__head">
+              <div class="job__who">
+                <span class="job__logo">T</span>
+                <div>
+                  <h3>Executive, Software Engineer (Backend)</h3>
+                  <p class="job__company">Tizaraa</p>
+                </div>
+              </div>
+              <div class="job__meta">
+                <span class="tag tag--ok">Current</span>
+                <span class="tag tag--muted tag--mono">May 2025 — Present</span>
+              </div>
+            </div>
+            <ul class="checklist">
+              <li>Built a complete HRM — employees, attendance API, leave, and payroll from scratch.</li>
+              <li>Owned the Daiki CRM backend and the configurable approval &amp; expense engine.</li>
+              <li>Extended STP project APIs for multi-country support; contributed to eCommerce admin modules.</li>
+            </ul>
+            <ul class="chip-row">
+              <li>Laravel</li><li>MySQL</li><li>Redis</li><li>REST</li><li>Docker</li><li>Server management</li>
+            </ul>
+          </article>
+
+          <article class="job card reveal">
+            <div class="job__head">
+              <div class="job__who">
+                <span class="job__logo job__logo--dark">S</span>
+                <div>
+                  <h3>Laravel Backend Developer</h3>
+                  <p class="job__company">Soft Deal IT</p>
+                </div>
+              </div>
+              <div class="job__meta">
+                <span class="tag tag--muted tag--mono">Oct 2024 — Apr 2025</span>
+              </div>
+            </div>
+            <ul class="checklist">
+              <li>Designed and built REST APIs and authentication for client projects.</li>
+              <li>Optimised database structure and query performance.</li>
+            </ul>
+            <ul class="chip-row">
+              <li>Laravel</li><li>MySQL</li><li>Git</li><li>Postman</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================== stack ===================== -->
+      <section class="section container" id="stack">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">04 — STACK</span>
+            <h2 class="section-title">Tools, by depth</h2>
           </div>
-          <div class="swiper_client-details">
-            <h5>Multi-country APIs</h5>
-            <small>STP project</small>
+          <p class="section-note">Grouped by how I've used them, not by logo count.</p>
+        </div>
+        <div class="stack">
+          <div class="stack__card stack__card--core reveal">
+            <div class="stack__head">
+              <div>
+                <span class="label label--accent">CORE — DAILY IN PRODUCTION</span>
+                <h3>Backend</h3>
+              </div>
+              <span class="tag tag--solid">Laravel 9 → 13 · 4 systems</span>
+            </div>
+            <ul class="pill-list pill-list--dark">
+              <li>PHP 8.x</li>
+              <li>REST API design</li>
+              <li>MySQL 8 · Redis</li>
+              <li>Queues, jobs, schedulers</li>
+              <li>Sanctum · JWT · Spatie RBAC</li>
+            </ul>
+          </div>
+          <div class="stack__card card reveal">
+            <span class="label label--accent">SHIPPED — FULL-STACK</span>
+            <h3>Frontend</h3>
+            <ul class="pill-list pill-list--accent">
+              <li>React 19</li><li>TypeScript</li><li>Next.js</li><li>Vue.js</li><li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="stack__card card reveal">
+            <span class="label label--accent">WORKING KNOWLEDGE</span>
+            <h3>Also</h3>
+            <ul class="pill-list">
+              <li>NestJS · Express · FastAPI</li>
+              <li>PostgreSQL · MongoDB</li>
+              <li>Docker · AWS S3 / MinIO</li>
+              <li>Postman · Python API tests</li>
+              <li>Git · Cursor · Claude</li>
+            </ul>
           </div>
         </div>
-      </figure>
+      </section>
 
-      <figure class="swiper-slide">
-        <figcaption>
-          Designed and developed REST APIs, tested with Postman and Python automation.
-        </figcaption>
-        <div class="swiper_client">
-          <div class="swiper_client-avater highlight_icon">
-            <i class="fa-solid fa-code"></i>
+      <!-- ================== services ===================== -->
+      <section class="section container" id="services">
+        <div class="section-head">
+          <span class="eyebrow">05 — SERVICES</span>
+          <h2 class="section-title">What I can take off your plate</h2>
+        </div>
+        <div class="services">
+          <article class="service card reveal">
+            <div class="service__top">
+              <span class="icon-tile icon-tile--lg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+              <span class="service__num">i.</span>
+            </div>
+            <h3>Backend &amp; REST APIs</h3>
+            <p>Secure Laravel APIs for web and mobile apps, with auth, RBAC and documented contracts.</p>
+            <a href="#contact">Start a project →</a>
+          </article>
+          <article class="service card reveal">
+            <div class="service__top">
+              <span class="icon-tile icon-tile--lg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 20V9"/></svg></span>
+              <span class="service__num">ii.</span>
+            </div>
+            <h3>Business systems</h3>
+            <p>HRM, CRM, ERP and approval workflows modelled around how your team really works.</p>
+            <a href="#contact">Start a project →</a>
+          </article>
+          <article class="service card reveal">
+            <div class="service__top">
+              <span class="icon-tile icon-tile--lg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+              <span class="service__num">iii.</span>
+            </div>
+            <h3>Database design</h3>
+            <p>Schemas, migrations off legacy systems, and query tuning when pages get slow.</p>
+            <a href="#contact">Start a project →</a>
+          </article>
+          <article class="service card reveal">
+            <div class="service__top">
+              <span class="icon-tile icon-tile--lg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>
+              <span class="service__num">iv.</span>
+            </div>
+            <h3>Full-stack delivery</h3>
+            <p>Laravel back end plus React or Next.js front end, shipped and maintained by one person.</p>
+            <a href="#contact">Start a project →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================== activity ===================== -->
+      <section class="section container activity" id="activity">
+        <div class="activity__side reveal">
+          <span class="eyebrow eyebrow--dark">06 — ACTIVITY</span>
+          <h2 class="section-title">On GitHub</h2>
+          <div class="activity__stat">
+            <span>Public repositories</span>
+            <strong data-github-repos>—</strong>
           </div>
-          <div class="swiper_client-details">
-            <h5>REST API Development</h5>
-            <small>Tizaraa · Soft Deal IT</small>
+          <a class="btn btn--light btn--block" href="https://github.com/Asikur58" target="_blank" rel="noopener">github.com/Asikur58 →</a>
+        </div>
+        <div class="activity__main card reveal">
+          <div class="activity__head">
+            <strong>Contribution graph</strong>
+            <span class="mono-note">last 12 months</span>
+          </div>
+          <div class="activity__graph">
+            <img src="https://ghchart.rshah.org/1E4D8C/Asikur58" alt="GitHub contribution graph for Asikur58" loading="lazy" width="663" height="104">
+          </div>
+          <div class="repos">
+            <a class="repo" href="https://github.com/Asikur580/Haji-hardware" target="_blank" rel="noopener"><strong>Haji-hardware</strong><span>POS with inventory &amp; billing</span></a>
+            <a class="repo" href="https://github.com/Asikur580/library" target="_blank" rel="noopener"><strong>library</strong><span>Library management, full-stack</span></a>
+            <a class="repo" href="https://github.com/Asikur580/dashboardCss" target="_blank" rel="noopener"><strong>dashboardCss</strong><span>Analytics dashboard UI</span></a>
           </div>
         </div>
-      </figure>
+      </section>
 
-      <figure class="swiper-slide">
-        <figcaption>
-          Authentication systems and role-based access control for enterprise users.
-        </figcaption>
-        <div class="swiper_client">
-          <div class="swiper_client-avater highlight_icon">
-            <i class="fa-solid fa-shield-halved"></i>
+      <!-- ================== contact ===================== -->
+      <section class="section container" id="contact">
+        <div class="contact reveal">
+          <div class="contact__intro">
+            <span class="eyebrow eyebrow--on-accent">07 — CONTACT</span>
+            <h2 class="contact__title">Have a system that needs a solid back end?</h2>
+            <a class="btn btn--white btn--xl btn--icon-end" href="mailto:asikur58039@gmail.com">
+              asikur58039@gmail.com
+              <span class="btn__circle btn__circle--dark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </a>
+            <div class="contact__links">
+              <a class="btn btn--outline-light" href="https://www.linkedin.com/in/asikur-rahman-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn btn--outline-light" href="https://github.com/Asikur58" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--outline-light" href="assets/Asikur Rahman Software Engineer.pdf" download>Download CV</a>
+            </div>
           </div>
-          <div class="swiper_client-details">
-            <h5>Secure Authentication</h5>
-            <small>Sanctum · RBAC</small>
-          </div>
+          <form class="contact__form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="9cd8e3ee-92d2-4cc4-9788-84a75384bb7f">
+            <label>Name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>What are you building?<textarea name="message" rows="4" required></textarea></label>
+            <button class="btn btn--dark btn--lg btn--block" type="submit">Send message</button>
+          </form>
         </div>
-      </figure>
+      </section>
+    </main>
 
-      <figure class="swiper-slide">
-        <figcaption>
-          Designed database structures and optimized their performance.
-        </figcaption>
-        <div class="swiper_client">
-          <div class="swiper_client-avater highlight_icon">
-            <i class="fa-solid fa-database"></i>
-          </div>
-          <div class="swiper_client-details">
-            <h5>Database Performance</h5>
-            <small>MySQL · PostgreSQL</small>
-          </div>
-        </div>
-      </figure>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+    <!-- ================== footer ===================== -->
+    <footer class="site-footer container">
+      <span>© <span data-year>2026</span> Asikur Rahman</span>
+      <span class="mono-note">Backend Software Engineer · Laravel</span>
+      <a class="btn btn--outline btn--sm" href="#top">Back to top ↑</a>
+    </footer>
 
-
-<!-- faqs -->
-
-<section id="faqs">
-  <h1>Frequently Asked Questions</h1>
-  <p>
-    Find answers to common queries regarding my services, project timelines, pricing, technologies used, and collaboration process. I aim to provide clear, transparent information to help you make informed decisions.
-  </p>
-  <menu class="container faqs_container">
-    <li class="faqs_item" data-aos="fade-in" data-aos-delay="200">
-      <div class="faqs_item-top">
-        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
-        <h5>What technologies do you specialize in?</h5>
-      </div>
-      <div class="faqs-item-bottom">
-        <span></span>
-        <p>
-          I specialize in backend development with Laravel, PHP, MySQL, and REST APIs. I also work with NestJS, Express.js, FastAPI, PostgreSQL, MongoDB, and frontends in React.js, Next.js, and Vue.js.
-        </p>
-      </div>
-    </li>
-
-    <li class="faqs_item" data-aos="fade-in" data-aos-delay="200">
-      <div class="faqs_item-top">
-        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
-        <h5>How long does it take to complete a project?</h5>
-      </div>
-      <div class="faqs-item-bottom">
-        <span></span>
-        <p>
-          Project timelines depend on the complexity and scope. On average, a custom web application takes between 1 to 3 months for development, but I always ensure timely delivery.
-        </p>
-      </div>
-    </li>
-
-    <li class="faqs_item" data-aos="fade-in" data-aos-delay="400">
-      <div class="faqs_item-top">
-        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
-        <h5>Do you offer ongoing maintenance after project completion?</h5>
-      </div>
-      <div class="faqs-item-bottom">
-        <span></span>
-        <p>
-          Yes, I offer ongoing maintenance and support to ensure your website or application remains updated, secure, and optimized.
-        </p>
-      </div>
-    </li>
-
-    <li class="faqs_item" data-aos="fade-in" data-aos-delay="400">
-      <div class="faqs_item-top">
-        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
-        <h5>What is your pricing structure?</h5>
-      </div>
-      <div class="faqs-item-bottom">
-        <span></span>
-        <p>
-          My pricing is project-based, depending on the requirements and complexity. I provide clear and transparent quotes after assessing the scope and objectives of your project.
-        </p>
-      </div>
-    </li>
-
-    <li class="faqs_item" data-aos="fade-in" data-aos-delay="600">
-      <div class="faqs_item-top">
-        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
-        <h5>Can you build APIs for my mobile or frontend app?</h5>
-      </div>
-      <div class="faqs-item-bottom">
-        <span></span>
-        <p>
-          Yes. I design and build secure REST APIs with authentication and role-based access (Sanctum, RBAC), and I test them with Postman and Python automation.
-        </p>
-      </div>
-    </li>
-
-    <li class="faqs_item" data-aos="fade-in" data-aos-delay="600">
-      <div class="faqs_item-top">
-        <span class="faq_icon"><i class="fa-solid fa-angle-down"></i></span>
-        <h5>How do you ensure the security of my project?</h5>
-      </div>
-      <div class="faqs-item-bottom">
-        <span></span>
-        <p>
-          I follow best security practices, including regular code reviews, encryption, role-based access control, and vulnerability testing to ensure your project is secure and protected from potential threats.
-        </p>
-      </div>
-    </li>
-
-  </menu>
-</section>
-
-<!-- contact -->
-
-<section id="contact">
-  <div class="container contact_container">
-    <menu class="contact_options">
-      <a href="#" class="contact_option" target="_blank">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="#" class="contact_option" target="_blank">
-        <i class="fa-brands fa-facebook-messenger"></i>
-      </a>
-      <a href="#" class="contact_option" target="_blank">
-        <i class="fa-brands fa-square-whatsapp"></i>
-      </a>
-      <a href="3" class="contact_option" target="_blank">
-        <i class="fa-solid fa-phone"></i>
-      </a>
-    </menu>
-    <form action="https://api.web3forms.com/submit" method="POST" data-aos="fade-up" data-aos-delay="200">
-      <input type="hidden" name="access_key" value="9cd8e3ee-92d2-4cc4-9788-84a75384bb7f">
-      <input type="text" name="name" placeholder="Full Name">
-      <input type="email" name="email" placeholder="Email Address">
-      <textarea rows="7" name="message" placeholder="message"></textarea>
-      <button type="submit" class="btn primary">Send</button>
-    </form>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-<!-- swiper js -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- mixitup  -->
-<script src="mix/dist/mixitup.min.js"></script>
-<!-- animate on scroll  -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init({duration: 2000, offset: 80});
-</script>
-<!-- custom js -->
-<script src="main.js"></script>
-
-
+    <script src="main.js"></script>
   </body>
 </html>

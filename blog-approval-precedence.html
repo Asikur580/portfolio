@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolving approval workflows with a precedence engine — Asikur Rahman</title>
+    <meta name="description" content="How a unified 12-level precedence engine fixed inconsistent approval routing in a multi-company Laravel ERP.">
+    <meta property="og:title" content="Resolving approval workflows with a precedence engine">
+    <meta property="og:description" content="One precedence order for branch, department and designation workflows.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script>
+      if (localStorage.getItem('portfolio-theme') === 'dark-theme-variables') {
+        document.body.className = 'dark-theme-variables';
+      }
+    </script>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ================== header ===================== -->
+    <header class="site-header" id="top">
+      <div class="site-header__bar">
+        <a class="brand" href="index.html">
+          <span class="brand__avatar"><img src="assets/asikur-court.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Asikur Rahman</span>
+            <span class="brand__role">BACKEND SOFTWARE ENGINEER</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#services">Services</a>
+          <a href="blog.html" class="is-current">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="icon-btn nav_theme-btn" type="button" aria-label="Toggle dark mode">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <a class="btn btn--accent header-hire" href="index.html#contact">Hire me</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="article">
+        <a class="article__back" href="blog.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          All posts
+        </a>
+        <div class="article__tags">
+          <span class="tag tag--accent">Architecture</span>
+          <span class="tag tag--mono tag--outline">Laravel 9 · MySQL · Redis</span>
+        </div>
+        <h1 class="article__title">Resolving approval workflows with a precedence engine</h1>
+        <div class="article__meta">
+          <span class="article__author"><img src="assets/asikur-court.png" alt="">Asikur Rahman</span>
+          <span>Sep 2026</span>
+          <span>5 min read</span>
+        </div>
+
+        <div class="prose">
+          <p class="lead">In the Daiki ERP, one approval engine handles 10 request types — payments, travel, expenses, advances, manpower requisitions, purchases and budgets. It replaced paper forms, email chains and Kissflow. The hardest part was not the approvals themselves. It was deciding <em>which</em> workflow a request should follow.</p>
+
+          <h2>Too many valid answers</h2>
+          <p>Admins could define workflows for a branch, for a department, or for a designation. That flexibility was the requirement — but it meant one request often matched several definitions at once. Depending on which one the code found first, the same kind of request could be routed to different approvers.</p>
+          <p>Inconsistent routing is worse than slow routing: people stop trusting the system and go back to email.</p>
+
+          <h2>One order, decided once</h2>
+          <p>I replaced the ad-hoc lookups with a single resolution engine that walks a fixed <strong>12-level precedence order</strong>, from the most specific match to the most general. The first level that matches wins. Every request type goes through the same resolver, so the answer to "why did this go to that person?" is always the same list, in the same order.</p>
+
+          <div class="callout">
+            <strong>DESIGN NOTE</strong>
+            When configuration can overlap, make precedence explicit and put it in one place. Don't let query order decide business rules.
+          </div>
+
+          <h2>Bugs that only showed up later</h2>
+          <p>Once routing was stable, four quieter problems surfaced:</p>
+          <ol>
+            <li><strong>Cross-chain condition leakage.</strong> Step conditions leaked into other workflow chains that used the same step order. Fix: strict scope matching per chain, so a condition only applies inside its own chain.</li>
+            <li><strong>Ledger consistency.</strong> A failed budget-ledger write could roll back an approval that had already happened. Fix: the ledger is decoupled from the approval transaction, so a ledger failure never breaks the approval flow.</li>
+            <li><strong>Wrong company context.</strong> Some calculations and dashboards used the current user's company instead of the request's. Fix: every service scopes explicitly by the request owner.</li>
+            <li><strong>Test vs production drift.</strong> The "test this chain" feature did not behave like real execution. Fix: both now run through one shared chain-walker engine.</li>
+          </ol>
+
+          <h2>Budgets on data that had none</h2>
+          <p>Budget control was added after projects already existed with no budget structure. Rather than forcing a data migration first, I added a backward-compatible validation layer with safe fallback paths. New projects get full budget checks; old ones keep working until they are updated.</p>
+
+          <h2>Takeaways</h2>
+          <ul>
+            <li>Flexible configuration needs a strict, documented resolution order.</li>
+            <li>Scope every rule to where it was defined — chain, company, request owner.</li>
+            <li>Side effects like ledgers should not be able to undo the main action.</li>
+            <li>A "test mode" is only useful if it runs the exact production code path.</li>
+          </ul>
+        </div>
+
+        <a class="related" href="daiki-approval.html">
+          <span>
+            <span class="label">READ THE FULL CASE STUDY</span>
+            <strong>Daiki ERP — Approval Process &amp; Expense Control</strong>
+          </span>
+          <span class="arrow-btn arrow-btn--light"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        </a>
+      </article>
+
+      <section class="container more-posts" aria-labelledby="more-title">
+        <div class="section-head">
+          <h2 class="section-title section-title--sm" id="more-title">More posts</h2>
+        </div>
+        <div class="posts">
+          <a class="post-card" href="blog-payroll-engine.html">
+            <span class="post-card__meta">Sep 2026 · 6 min read</span>
+            <h3 class="post-card__title">Building a payroll engine that never pays twice</h3>
+          </a>
+          <a class="post-card" href="blog-live-data-migration.html">
+            <span class="post-card__meta">Sep 2026 · 6 min read</span>
+            <h3 class="post-card__title">Migrating live financial data with zero mismatch</h3>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================== footer ===================== -->
+    <footer class="site-footer container">
+      <span>© <span data-year>2026</span> Asikur Rahman</span>
+      <span class="mono-note">Backend Software Engineer · Laravel</span>
+      <a class="btn btn--outline btn--sm" href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="blog.js"></script>
+  </body>
+</html>
